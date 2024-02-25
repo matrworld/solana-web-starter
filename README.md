@@ -1,5 +1,4 @@
-# Solana Web Template
-- NX
+# Solana Web Starter Template
 - React
 - Tailwind
 - DaisyUI
@@ -33,6 +32,8 @@ Put things you want shared across apps such as types and utilities in `./package
 View the available NX generators here.
 https://nx.dev/nx-api
 
-### WIP
+<hr>
+
+**_WIP_**
 
 _This is still a WIP. It would be nice to add example Anchor integration as well._
