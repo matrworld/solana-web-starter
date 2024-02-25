@@ -12,8 +12,13 @@
 
 #### We use Nx to manage apps
 https://nx.dev/getting-started/intro
-### Start Dev Servers
+
+#### We use Railway for hosting
+https://railway.app/
+
+## Development
 Start apps by running `npx nx serve [appname]`.
+
 
 ### Web App
 To start the included React app run `npx nx serve web`.
@@ -31,6 +36,25 @@ Put things you want shared across apps such as types and utilities in `./package
 ### Add Apps
 View the available NX generators here.
 https://nx.dev/nx-api
+
+## Deploy
+To deploy the included apps on a platform like Railway, we use the following settings:
+
+### Example Static Web App
+
+**Build Command:** `npx nx build web`
+
+**Watch Paths:** `/apps/web`
+
+**Start Command:** `npx http-server ./dist/apps/web`
+
+### Example Node API
+
+**Build Command:** `npx nx build api`
+
+**Watch Paths:** `/apps/api`
+
+**Start Command:** `node ./dist/apps/api`
 
 <hr>
 
