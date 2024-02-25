@@ -1,4 +1,4 @@
-# Matr Go to Market Template
+# Solana Web Template
 - NX
 - React
 - Tailwind
@@ -6,14 +6,33 @@
 - Solana Wallet Adapter
 
 ## Develop
-### Prerequisites
+### We use `pnpm` for packages
 1. Install node 20+ if you don't have it: https://nodejs.org/en
 2. Install pnpm if you don't have it: `npm i -g pnpm`.
 3. Install NX CLI if you don't have it: `pnpm i -g nx`.
 
-### Setup
-1. Clone repo.
-2. Install repo by running `pnpm i` in root.
+### We use Nx to manage apps
+https://nx.dev/getting-started/intro
+#### Start Dev Servers
+Start apps by running `npx nx serve [appname]`.
 
-### Dev Server
-Start the web app by running `nx serve web`.
+#### Web App
+To start the included React app run `npx nx serve web`.
+
+#### Api
+To start the included Fastify API run `npx nx serve api`.
+
+#### Lib
+Put things you want shared across apps such as types and utilities in `./packages/lib`.
+
+**Usage**
+
+`import { lib } from "@template--solana-web-app/lib"`
+
+#### Add Apps
+View the available NX generators here.
+https://nx.dev/nx-api
+
+### WIP
+
+_This is still a WIP. It would be nice to add example Anchor integration as well._

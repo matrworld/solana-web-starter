@@ -1,7 +1,7 @@
 import './styles.postcss';
 import '@solana/wallet-adapter-react-ui/styles.css';
 
-import { StrictMode } from 'react';
+import { StrictMode, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { Home } from "./routes/home";
@@ -18,6 +18,8 @@ import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-r
 import { clusterApiUrl } from '@solana/web3.js';
 import { BookText } from 'lucide-react';
 
+import { lib } from "@template-solana-web/lib";
+
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
 const root = ReactDOM.createRoot(
@@ -31,6 +33,11 @@ function Root() {
 
   // You can also provide a custom RPC endpoint.
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+
+  useEffect(() => {
+    // I am a library
+    lib();
+  }, []);
 
   return (
     <StrictMode>
@@ -50,13 +57,13 @@ function Root() {
 function Nav() {
   const { publicKey, connected } = useWallet();
 
+
+
   return (
     <nav className="sticky top-0 flex justify-between items-center w-screen px-6 py-3 z-10">
-    <div className="h-8 w-8 relative">
-        <h2>DeDoc</h2>
-    </div>
+    <h2 className="text-2xl font-semibold">Template</h2>
     <div className="flex gap-3 flex-wrap">
-        <a href="/docs" className="btn btn-outline">
+        <a href="/" className="btn btn-outline">
             <span>
                 <BookText size={16} />
             </span>
@@ -79,7 +86,7 @@ function App() {
   return (
     <>
       <Nav />
-      <main className="min-h-screen">
+      <main className="min-h-screen mx-auto max-w-4xl">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="profile" element={<Profile />} />
