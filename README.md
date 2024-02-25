@@ -28,7 +28,7 @@ Put things you want shared across apps such as types and utilities in `./package
 
 `import { lib } from "@template--solana-web-app/lib"`
 
-#### Add Apps
+### Add Apps
 View the available NX generators here.
 https://nx.dev/nx-api
 
