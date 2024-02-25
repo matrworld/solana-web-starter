@@ -5,23 +5,23 @@
 - Solana Wallet Adapter
 
 ## Develop
-### We use `pnpm` for packages
+#### We use `pnpm` for packages
 1. Install node 20+ if you don't have it: https://nodejs.org/en
 2. Install pnpm if you don't have it: `npm i -g pnpm`.
 3. Install NX CLI if you don't have it: `pnpm i -g nx`.
 
-### We use Nx to manage apps
+#### We use Nx to manage apps
 https://nx.dev/getting-started/intro
-#### Start Dev Servers
+### Start Dev Servers
 Start apps by running `npx nx serve [appname]`.
 
-#### Web App
+### Web App
 To start the included React app run `npx nx serve web`.
 
-#### Api
+### Api
 To start the included Fastify API run `npx nx serve api`.
 
-#### Lib
+### Lib
 Put things you want shared across apps such as types and utilities in `./packages/lib`.
 
 **Usage**
