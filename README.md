@@ -1,10 +1,9 @@
 
 ![header](/doc/header.png)
 # Solana Web Starter Template
-- React
-- Tailwind
-- DaisyUI
-- Solana Wallet Adapter
+- React app with React Router, Tailwind, DaisyUI and Solana Wallet Adapter.
+- Fastify API
+- Shared lib/package
 
 ## Develop
 ### We use `pnpm` for packages
