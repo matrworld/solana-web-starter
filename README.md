@@ -5,20 +5,19 @@
 - Solana Wallet Adapter
 
 ## Develop
-#### We use `pnpm` for packages
+### We use `pnpm` for packages
 1. Install node 20+ if you don't have it: https://nodejs.org/en
 2. Install pnpm if you don't have it: `npm i -g pnpm`.
 3. Install NX CLI if you don't have it: `pnpm i -g nx`.
 
-#### We use Nx to manage apps
+### We use Nx to manage apps
 https://nx.dev/getting-started/intro
 
-#### We use Railway for hosting
+### We use Railway for hosting
 https://railway.app/
 
 ## Development
 Start apps by running `npx nx serve [appname]`.
-
 
 ### Web App
 To start the included React app run `npx nx serve web`.
@@ -40,21 +39,41 @@ https://nx.dev/nx-api
 ## Deploy
 To deploy the included apps on a platform like Railway, we use the following settings:
 
-### Example Static Web App
+### Static Web App
+To deploy a static website like the React app, you can serve it like this.
 
-**Build Command:** `npx nx build web`
+**Build Command**
+```
+npx nx build web
+```
 
-**Watch Paths:** `/apps/web`
+**Watch Paths**
+```
+/apps/web
+```
 
-**Start Command:** `npx http-server ./dist/apps/web`
+**Start Command**
+```
+npx http-server ./dist/apps/web
+```
 
-### Example Node API
+### Node App
+To deploy a Node app like the API, you can directly start it like this.
 
-**Build Command:** `npx nx build api`
+**Build Command**
+```
+npx nx build api
+```
 
-**Watch Paths:** `/apps/api`
+**Watch Paths**
+```
+/apps/api
+```
 
-**Start Command:** `node ./dist/apps/api`
+**Start Command**
+```
+node ./dist/apps/api
+```
 
 <hr>
 
